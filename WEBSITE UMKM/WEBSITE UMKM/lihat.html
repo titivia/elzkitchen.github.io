@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+    
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfde1;
+            /* Warna background */
+            color: #4f4f4f;
+            text-align: center;
+        }
+    
+        /* Header Section */
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: rgba(250, 129, 48, 0.9);
+            /* Warna header */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            border-bottom-left-radius: 26px;
+            border-bottom-right-radius: 26px;
+        }
+    
+        .logo {
+            width: 80px;
+            height: 80px;
+        }
+    
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+    
+        .btn {
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 14px;
+            text-decoration: none;
+            transition: background 0.3s;
+            display: inline-block;
+        }
+    
+        .btn:hover {
+            background-color: rgba(250, 64, 51, 0.9);
+        }
+    
+        /* Container Utama */
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            /* Beri jarak antar item */
+            margin: 30px auto;
+            /* Pusatkan container dengan margin */
+            padding: 10px;
+            max-width: 800px;
+            /* Batasi lebar container agar lebih seimbang */
+        }
+    
+        /* Setiap Item Menu */
+        .menu-item {
+            position: relative;
+            /* Untuk menempatkan elemen anak */
+            background-image: url('lihat-bck.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+        }
+    
+        /* Menempatkan teks di atas gambar */
+        .menu-title {
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #4f4f4f;
+            /* Warna teks seragam */
+            margin-top: 5px;
+        }
+    
+        /* Gambar menu */
+        .menu-item img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5px;
+            z-index: 2;
+            /* Pastikan gambar tetap di atas background */
+        }
+    
+        .hidden-title {
+            color: #fdfde1;
+            /* Warna teks sama dengan background */
+        }
+    </style>
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="btn">Home</a>
+            <a href="profile.html" class="btn">Profile</a>
+            <a href="menu.html" class="btn">Daftar Menu</a>
+            <a href="review.html" class="btn">Review</a>
+            <a href="order.html" class="btn">Pesan di sini</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <h1 class="hidden-title" style="margin-top: 30px;">Menu</h1>
+    <div class="menu-container">
+        <!-- Item 1: Rendang Uni Elz -->
+        <div class="menu-item">
+            <img src="rendang.png" alt="Rendang Uni Elz">
+            <div class="menu-title">Rendang Uni Elz</div>
+        </div>
+    
+        <!-- Item 2: Kering Kentang Mustafa -->
+        <div class="menu-item">
+            <img src="kering_kentang_mustafa.png" alt="Kering Kentang Mustafa">
+            <div class="menu-title">Kering Kentang Mustafa</div>
+        </div>
+    
+        <!-- Item 3: Kering Kentang Balado -->
+        <div class="menu-item">
+            <img src="kering_kentang_balado.png" alt="Kering Kentang Balado">
+            <div class="menu-title">Kering Kentang Balado</div>
+        </div>
+    
+        <!-- Item 4: Sambal Teri Mercon -->
+        <div class="menu-item">
+            <img src="sambal_teri_mercon.png" alt="Sambal Teri Mercon">
+            <div class="menu-title">Sambal Teri Mercon</div>
+        </div>
+    
+        <!-- Item 5: Sambal Cumi Mercon -->
+        <div class="menu-item">
+            <img src="sambal_cumi_mercon.png" alt="Sambal Cumi Mercon">
+            <div class="menu-title">Sambal Cumi Mercon</div>
+        </div>
+    
+        <!-- Item 6: Sambal Cakalang Mercon -->
+        <div class="menu-item">
+            <img src="sambal_cumi_mercon.png" alt="Sambal Cakalang Mercon">
+            <div class="menu-title">Sambal Cakalang Mercon</div>
+        </div>
+    
+        <!-- Item 7: Ketupat Sayur Padang -->
+        <div class="menu-item">
+            <img src="soto_padang_uni_elz.png" alt="Ketupat Sayur Padang">
+            <div class="menu-title">Ketupat Sayur Padang</div>
+        </div>
+    
+        <!-- Item 8: Soto Padang Uni Elz -->
+        <div class="menu-item">
+            <img src="soto_padang_uni_elz.png" alt="Soto Padang Uni Elz">
+            <div class="menu-title">Soto Padang Uni Elz</div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfde1;
+            /* Warna background */
+            color: #4f4f4f;
+            text-align: center;
+        }
+
+        /* Header Section */
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: rgba(250, 129, 48, 0.9);
+            /* Warna header */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            border-bottom-left-radius: 26px;
+            border-bottom-right-radius: 26px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 14px;
+            text-decoration: none;
+            transition: background 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: rgba(250, 64, 51, 0.9);
+        }
+
+        /* Container Utama */
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            /* Pusatkan elemen secara horizontal */
+            align-items: stretch;
+            /* Semua item sama tinggi */
+            gap: 30px;
+            /* Beri jarak antar item */
+            flex-wrap: wrap;
+            /* Responsif agar item berpindah baris di layar kecil */
+            margin: 50px auto;
+            /* Pusatkan container dengan margin */
+            padding: 20px;
+            max-width: 900px;
+            /* Batasi lebar container agar lebih seimbang */
+        }
+
+        /* Setiap Item Menu */
+        .menu-item {
+            background-color: #fdfde1;
+            /* Warna sama dengan background */
+            border-radius: 14px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1 1 250px;
+            /* Responsif: Min 250px, sama-sama membagi ruang */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Pusatkan isi vertikal */
+            justify-content: space-between;
+            /* Jarak seimbang antar elemen */
+            padding: 20px;
+            text-align: center;
+      
+        }
+
+        /* Menempatkan teks di atas gambar */
+        .menu-item .menu-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #8f8f8f;
+            /* Warna teks seragam */
+            margin-bottom: 10px;
+            /* Jarak teks dengan gambar */
+        }
+
+        /* Gambar menu */
+        .menu-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Tombol */
+        .menu-item button {
+            background-color: #ffa61a;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .menu-item button:hover {
+            background-color: #ff8f00;
+        }
+
+        .hidden-title {
+            color: #fdfde1;
+            /* Warna teks sama dengan background */
+        }
+
+
+ /*ini overlay*/
+    /* Style konten popup */
+    .popup {
+      display: none; /* Popup tidak terlihat awalnya */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Background hitam transparan */
+      justify-content: center;
+      align-items: center;
+    }
+    .popup-content {
+      position: relative;
+      background-image: url(lihat-bck.png);
+      padding: 20px;
+      border-radius: 30px;
+      width: 1080px;
+      height: 650px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     }
+
+    /* Tombol close (X) */
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 30px;
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+    }
+
+    /* Hover effect untuk tombol close */
+    .close:hover {
+      color: red;
+    }
+    .popupfont{color: #fdfde1;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+    /*menu*/
+        
+        /* Menempatkan teks di atas gambar */
+        .menu-containermakanan {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            /* Beri jarak antar item */
+            margin: 30px auto;
+            /* Pusatkan container dengan margin */
+            padding: 40px;
+            max-width: 800px;
+            /* Batasi lebar container agar lebih seimbang */
+        }
+
+    .menu-itemmakanan {
+            position: relative;
+            /* Untuk menempatkan elemen anak */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 70px;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+        }
+
+        .menu-titlemakanan {
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #4f4f4f;
+            /* Warna teks seragam */
+            margin-top: 5px;
+        }
+    
+        /* Gambar menu */
+        .menu-itemmakanan img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 5px;
+            z-index: 2;
+            /* Pastikan gambar tetap di atas background */
+        }
+    
+        .hidden-title {
+            color: #fdfde1;
+            /* Warna teks sama dengan background */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="btn">Home</a>
+            <a href="profile.html" class="btn">Profile</a>
+            <a href="menu.html" class="btn">Daftar Menu</a>
+            <a href="review.html" class="btn">Review</a>
+            <a href="order.html" class="btn">Pesan di sini</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <h1 class="hidden-title" style="margin-top: 30px;">Menu</h1>
+    <div class="menu-container">
+        <!-- Item 1: Makanan -->
+        <div class="menu-item">
+            <div class="menu-title"><span class="highlight">Makanan</span></div>
+            <img src="makanan.png" alt="Makanan">
+            <!-- Button yang dapat di-klik -->
+            <button onclick="openPopup('popup1')">Lihat</button>
+        </div>
+        
+        <!-- Item 2: Minuman -->
+        <div class="menu-item">
+            <div class="menu-title">Minuman</div>
+            <img src="minuman.png" alt="Minuman">
+            <button onclick="openPopup('popup2')">Lihat</button>
+        </div>
+
+
+        <!-- Item 3: Snack -->
+        <div class="menu-item">
+            <div class="menu-title">Snack</div>
+            <img src="snack.png" alt="Snack">
+            <button onclick="openPopup('popup3')">Lihat</button>
+        </div>
+    </div>
+    <!-- Popup 1 -->
+     <div id="popup1" class="popup">
+     <div class="popup-content">
+      <span class="close" onclick="closePopup('popup1')">&times;</span>
+      <h1 class="popupfont">Menu Makanan</h1>
+    <div class="menu-containermakanan">
+        <!-- Item 1: Rendang Uni Elz -->
+        <div class="menu-itemmakanan">
+            <img src="rendang.png" alt="Rendang Uni Elz">
+            <div class="menu-titlemakanan">Rendang Uni Elz</div>
+        </div>
+    
+        <!-- Item 2: Kering Kentang Mustafa -->
+        <div class="menu-itemmakanan">
+            <img src="kering_kentang_mustafa.png" alt="Kering Kentang Mustafa">
+            <div class="menu-titlemakanan">Kering Kentang Mustafa</div>
+        </div>
+    
+        <!-- Item 3: Kering Kentang Balado -->
+        <div class="menu-itemmakanan">
+            <img src="kering_kentang_balado.png" alt="Kering Kentang Balado">
+            <div class="menu-titlemakanan">Kering Kentang Balado</div>
+        </div>
+    
+        <!-- Item 4: Sambal Teri Mercon -->
+        <div class="menu-itemmakanan">
+            <img src="sambal_teri_mercon.png" alt="Sambal Teri Mercon">
+            <div class="menu-titlemakanan">Sambal Teri Mercon</div>
+        </div>
+    
+        <!-- Item 5: Sambal Cumi Mercon -->
+        <div class="menu-itemmakanan">
+            <img src="sambal_cumi_mercon.png" alt="Sambal Cumi Mercon">
+            <div class="menu-titlemakanan">Sambal Cumi Mercon</div>
+        </div>
+    
+        <!-- Item 6: Sambal Cakalang Mercon -->
+        <div class="menu-itemmakanan">
+            <img src="sambal_cumi_mercon.png" alt="Sambal Cakalang Mercon">
+            <div class="menu-titlemakanan">Sambal Cakalang Mercon</div>
+        </div>
+    
+        <!-- Item 7: Ketupat Sayur Padang -->
+        <div class="menu-itemmakanan">
+            <img src="soto_padang_uni_elz.png" alt="Ketupat Sayur Padang">
+            <div class="menu-titlemakanan">Ketupat Sayur Padang</div>
+        </div>
+    
+        <!-- Item 8: Soto Padang Uni Elz -->
+        <div class="menu-itemmakanan">
+            <img src="soto_padang_uni_elz.png" alt="Soto Padang Uni Elz">
+            <div class="menu-titlemakanan">Soto Padang Uni Elz</div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- Popup 2 -->
+     <div id="popup2" class="popup">
+     <div class="popup-content">
+      <span class="close" onclick="closePopup('popup2')">&times;</span>
+      <h1 class="popupfont">Menu Minuman</h1>
+      <div class="menu-containermakanan">
+        <!-- Item 1: capcin -->
+        <div class="menu-itemmakanan">
+            <img src="cappucino cincau 1.png" alt="cappucino cincau">
+            <div class="menu-titlemakanan">cappucino cincau</div>
+        </div>
+    
+        <!-- Item 2: cokelat -->
+        <div class="menu-itemmakanan">
+            <img src="coklat.jpg" alt="cokelat">
+            <div class="menu-titlemakanan">cokelat</div>
+        </div>
+    
+        <!-- Item 3: thai tea -->
+        <div class="menu-itemmakanan">
+            <img src="thaitea.jpg" alt="thaitea">
+            <div class="menu-titlemakanan">thaitea</div>
+        </div>
+    
+        <!-- Item 4: greentea -->
+        <div class="menu-itemmakanan">
+            <img src="green tea.jpg" alt="greentea">
+            <div class="menu-titlemakanan">greentea</div>
+        </div>
+    
+        <!-- Item 5: cendol -->
+        <div class="cendol">
+            <img src="cendol.png" alt="cendol">
+            <div class="menu-titlemakanan">cendol</div>
+        </div>
+      </div>
+     </div>
+    </div>
+
+    <!-- Popup 3 -->
+     <div id="popup3" class="popup">
+      <div class="popup-content">
+      <span class="close" onclick="closePopup('popup3')">&times;</span>
+      <h1 class="popupfont">Menu Snack</h1>
+      <div class="menu-containermakanan">
+        <!-- Item 1: risol -->
+        <div class="menu-itemmakanan">
+            <img src="risoles mayo 1.png" alt="risol">
+            <div class="menu-titlemakanan">Risol</div>
+        </div>
+    
+        <!-- Item 2: Sumsum -->
+        <div class="menu-itemmakanan">
+            <img src="sumsumgoogle.png" alt="Bubur Sumsum">
+            <div class="menu-titlemakanan">Bubur Sumsum</div>
+        </div>
+    
+        <!-- Item 3: Makaroni Schotel -->
+        <div class="menu-itemmakanan">
+            <img src="makaroni schotel 1.png" alt="Makaroni Schotel">
+            <div class="menu-titlemakanan">Makaroni Schotel</div>
+        </div>
+    
+        <!-- Item 4: Lemper -->
+        <div class="menu-itemmakanan">
+            <img src="lemper 1.png" alt="Lemper">
+            <div class="menu-titlemakanan">Lemper</div>
+        </div>
+    
+        <!-- Item 5: Dimsum -->
+        <div class="menu-itemmakanan">
+            <img src="dimsum 1.png" alt="Dimsum">
+            <div class="menu-titlemakanan">Dimsum</div>
+        </div>
+    
+        <!-- Item 6: Bubur Kacang Ijo -->
+        <div class="menu-itemmakanan">
+            <img src="Bubur-1 1.png" alt="Bubur Kacang Ijo">
+            <div class="menu-titlemakanan">Bubur Kacang Ijo</div>
+        </div>
+    
+        <!-- Item 7: Nastar -->
+        <div class="menu-itemmakanan">
+            <img src="nastargoogle.png" alt="Nastar">
+            <div class="menu-titlemakanan">Nastar</div>
+        </div>
+    
+        <!-- Item 8: Kastengel -->
+        <div class="menu-itemmakanan">
+            <img src="kastengelgoogle.png" alt="Kastengel">
+            <div class="menu-titlemakanan">Kastengel</div>
+        </div>
+    </div>
+      </div>
+     </div>
+
+    
+ <script>
+    // Fungsi untuk membuka popup
+    function openPopup(popupId) {
+      document.getElementById(popupId).style.display = 'flex';
+    }
+
+    // Fungsi untuk menutup popup
+    function closePopup(popupId) {
+      document.getElementById(popupId).style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>

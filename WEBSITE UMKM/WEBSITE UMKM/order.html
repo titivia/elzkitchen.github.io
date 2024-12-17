@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: url('review.png'); /* Background menembus semua */
+            background-size: cover;
+            background-attachment: fixed; /* Efek parallax */
+            background-position: center;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Header */
+        .header {
+            background-color: rgba(250, 129, 48, 0.7); /* Transparan */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .header img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 10px 20px;
+            border-radius: 14px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .nav a:hover {
+            background-color: #ff5e00;
+        }
+
+        .nav .active {
+            background-colorcolor: #ff7300;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            padding: 50px 20px;
+            color: #fff;
+            text-align: center;
+            background: rgba(255, 159, 104, 0.5); /* Tambahkan transparansi ke konten */
+            border-radius: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: rgba(255, 169, 61, 0.9); /* Transparansi */
+            border-radius: 14px;
+            width: 200px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+
+        .card img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .card a button {
+            background-color: #ff7b00;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        .card a button:hover {
+            background-color: #c7650a;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: rgba(250, 129, 48, 0.7); /* Transparan */
+            padding: 20px;
+            color: white;
+            margin-top: 5%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            text-align: left;
+            position: relative;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .whatsapp-icon {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <img src="logo.png" alt="Logo">
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="menu.html">Daftar Menu</a>
+            <a href="review.html">Review</a>
+            <a href="order.html" class="active">Pesan di sini</a>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-container">
+        <h1>Contact us</h1>
+        <div class="contact-cards">
+            <!-- Instagram Card -->
+            <div class="card">
+                <img src="instagram.png" alt="Instagram">
+                <h2>Instagram</h2>
+                <a href="https://www.instagram.com/eel_eliza/" target="_blank">
+                    <button>Follow Me</button>
+                </a>
+            </div>
+
+            <!-- WhatsApp Card -->
+            <div class="card">
+                <img src="whatsapp_1384007.png" alt="WhatsApp">
+                <h2>WhatsApp</h2>
+                <a href="https://wa.me/6287780742629" target="_blank">
+                    <button>Pesan Disini</button>
+                </a>
+            </div>
+
+            <!-- Email Card -->
+            <div class="card">
+                <img src="email_4546924.png" alt="Email">
+                <h2>Email</h2>
+                <a href="mailto:kitchenkitchn@gmail.com">
+                    <button>Email Me</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>kitchenkitchn@gmail.com</p>
+        <p>08123xxxxx</p>
+        <p>@kitchen.instagram</p>
+        <a href="https://wa.me/6287780742629" target="_blank">
+            <img src="whatsapp_1384007.png" alt="WhatsApp" class="whatsapp-icon">
+        </a>
+    </footer>
+</body>
+
+</html>

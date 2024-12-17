@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Profile</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <style>
+        /* General Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header Section */
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: rgba(250, 129, 48, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            border-bottom-left-radius: 26px;
+            border-bottom-right-radius: 26px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 14px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: rgba(250, 64, 51, 0.9);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+            padding: 50px 20px;
+            background: url('profile.png') no-repeat center center;
+            background-size: cover;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        /* Content Section */
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .content .text {
+            text-align: left;
+            line-height: 1.6;
+            font-size: 1rem;
+            color: #555;
+            flex: 1;
+        }
+
+        .content .content-logo {
+            width: 150px;
+            height: 150px;
+        }
+
+        .content .content-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        /* Footer Section */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .footer img {
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="btn">Home</a>
+            <a href="profile.html" class="btn">Profile</a>
+            <a href="menu.html" class="btn">Daftar Menu</a>
+            <a href="review.html" class="btn">Review</a>
+            <a href="order.html" class="btn">Pesan di sini</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Kitchen Profile</h1>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content">
+        <div class="text">
+            <p>EL’Z Kitchen adalah sebuah UMKM yang awalnya dimulai dari hobi memasak sang owner. UMKM ini juga terbentuk, dengan menjual berbagai makanan dengan berbagai kategori seperti makanan tradisional, makanan ringan, lauk, sambak, kue dan minuman. Owner akan membuat makanan tersebut by order atau pre-order. Namun produk yang sering dijual adalah minuman cendol creamy gula aren, capucinno cincau, dan kue onde onde. </p>
+        </div>
+        <div class="content-logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Desain</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <style>
+        /* General Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            background: url('bck.png') no-repeat center center fixed;
+            background-size: cover; /* Bug diperbaiki */
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Header Section */
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: rgba(250, 129, 48, 0.9); /* Transparan agar background terlihat */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            border-bottom-left-radius: 26px;
+            border-bottom-right-radius: 26px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 14px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: rgba(250, 64, 51, 0.9);
+        }
+
+        /* Main Content */
+        .main {
+            text-align: center;
+            padding: 40px;
+            margin-top: 10%;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .image-box {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            margin: 0 auto;
+            background: url('bck.png') no-repeat center center;
+            background-size: cover;
+            border-radius: 14px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="btn">Home</a>
+            <a href="profile.html" class="btn">Profile</a>
+            <a href="menu.html" class="btn">Daftar Menu</a>
+            <a href="review.html" class="btn">Review</a>
+            <a href="order.html" class="btn">Pesan di sini</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <h1>Selamat Datang!</h1>
+        <p>Mau makan apa hari ini?</p>
+    </main>
+</body>
+
+</html>
